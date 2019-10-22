@@ -32,13 +32,8 @@ TODO: Fill out this long description.
 
 ## Maintainers
 
-[@dipto0321](https://github.com/dipto0321)
+[@Dipto Karmakar](https://github.com/dipto0321)
 
-## Contributing
-
-
-
-Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
 
