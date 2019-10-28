@@ -5,6 +5,21 @@
     }
   ],
   "settings": {
-    "python.pythonPath": "/home/dipto47/.local/share/virtualenvs/draggle_blog-7nAxuLm0/bin/python"
+    "python.pythonPath": "/home/dipto47/.local/share/virtualenvs/draggle_blog-7nAxuLm0/bin/python",
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#409ad5",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#f4cbe3",
+      "activityBarBadge.foreground": "#15202b",
+      "titleBar.activeBackground": "#2980b9",
+      "titleBar.inactiveBackground": "#2980b999",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveForeground": "#e7e7e799",
+      "statusBar.background": "#2980b9",
+      "statusBarItem.hoverBackground": "#409ad5",
+      "statusBar.foreground": "#e7e7e7"
+    },
+    "peacock.color": "#2980b9"
   }
 }

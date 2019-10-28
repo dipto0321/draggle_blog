@@ -7,4 +7,6 @@ def home_page(request):
 
 
 def hello_world(request):
-    return render(request, "hello_world.html")
+    focus_message = "Hey! This is Django"
+    title = "Hello! Django"
+    return render(request, "hello_world.html", {"title": title, "focus_message": focus_message})
