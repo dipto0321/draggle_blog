@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Name(models.Model):
+class BlogPost(models.Model):
     title = models.TextField()
     content = models.TextField(null=True, blank=True)
 
