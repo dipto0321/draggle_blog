@@ -1,12 +1,13 @@
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path
 
-from .views import home_page, hello_world
+from .views import home_page, about_page, contact_page
 from blog.views import get_blog_post
 
 urlpatterns = [
     path("draggle-admin-dash/", admin.site.urls),
     path("", home_page),
-    re_path(r"^hello?/$", hello_world),
+    path("about/", about_page),
+    path("contact/", contact_page),
     path("blog/posts", get_blog_post),
 ]
