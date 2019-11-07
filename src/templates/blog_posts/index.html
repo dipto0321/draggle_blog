@@ -2,4 +2,15 @@
 {%block head_title %} {{title}} {% endblock %}
 {% block content %}
 
+<ul class="collection with-header">
+  <li class="collection-header">
+    <h4>First Names</h4>
+  </li>
+  {% for post in post_list %}
+  <li class="collection-item">
+    <div>{{post.title}}<a href="/blog/{{post.slug}}/" class="secondary-content"><i class="material-icons">send</i></a>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}

@@ -9,6 +9,6 @@ urlpatterns = [
     path("", home_page),
     path("about/", about_page),
     path("contact/", contact_page),
-    path("blog/posts/", blog_post_list_view),
-    path("blog/posts/<str:slug>/", blog_post_retrive_view),
+    path("blog/", blog_post_list_view),
+    path("blog/<str:slug>/", blog_post_retrive_view),
 ]
