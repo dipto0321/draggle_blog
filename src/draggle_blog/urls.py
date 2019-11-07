@@ -9,5 +9,5 @@ urlpatterns = [
     path("", home_page),
     path("about/", about_page),
     path("contact/", contact_page),
-    path("blog/posts/<int:post_id>/", get_blog_post),
+    path("blog/posts/<str:slug>/", get_blog_post),
 ]
