@@ -8,6 +8,7 @@
     "python.pythonPath": "/home/dipto47/.local/share/virtualenvs/draggle_blog-7nAxuLm0/bin/python",
     "workbench.colorCustomizations": {
       "activityBar.background": "#409ad5",
+      "activityBar.activeBorder": "#f4cbe3",
       "activityBar.foreground": "#15202b",
       "activityBar.inactiveForeground": "#15202b99",
       "activityBarBadge.background": "#f4cbe3",
