@@ -3,6 +3,7 @@
 ![banner](media/draggle_blog.png)
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4367d3cf13f84ae5a0dcf96f15e7800d)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dipto0321/draggle_blog&amp;utm_campaign=Badge_Grade)
 
 > This is a blog application. I use django for making this app.
 
