@@ -1,9 +1,9 @@
 # draggle-blog
 
-![banner]()
+![banner](media/draggle_blog.png)
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-TODO: Put more badges here.
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4367d3cf13f84ae5a0dcf96f15e7800d)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dipto0321/draggle_blog&amp;utm_campaign=Badge_Grade)
 
 > This is a blog application. I use django for making this app.
 
@@ -11,23 +11,37 @@ TODO: Fill out this long description.
 
 ## Table of Contents
 
-- [Background](#background)
-- [Install](#install)
-- [Usage](#usage)
-- [Maintainers](#maintainers)
-- [Contributing](#contributing)
-- [License](#license)
+- [draggle-blog](#draggle-blog)
+  - [Table of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Maintainers](#maintainers)
+  - [License](#license)
 
 ## Background
-
+Tech stacks used for this application
+- Python 3.7
+- Django 2.2
+- Materialize css
+  
 ## Install
-
+First of all you have to install pipenv
+```shell
+pip install pipenv
 ```
+Then open terminal in the project directory and run this command
+```shell
+cd src/
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
 ```
 
 ## Usage
-
+Goto localhost
 ```
+http://127.0.0.1:8000/
 ```
 
 ## Maintainers

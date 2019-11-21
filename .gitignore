@@ -1,1 +1,4 @@
 src/db.sqlite3
+src/draggle_blog/__pycache__/
+.vscode
+*.code-workspace
