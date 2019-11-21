@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import BlogPost
-from .forms import BlogPostForm
+from .forms import BlogPostModelForm
 from helpers.utils import slug_generator
 
 
@@ -12,11 +12,12 @@ def blog_post_list_view(request):
 
 
 def blog_post_create_view(request):
-    post_form = BlogPostForm(request.POST or None)
+    post_form = BlogPostModelForm(request.POST or None)
     if post_form.is_valid():
-        slug = slug_generator(post_form.cleaned_data["title"])
-        post_obj = BlogPost.objects.create(**post_form.cleaned_data, slug=slug)
-        post_form = BlogPostForm()
+        post_obj = post_form.save(commit=False)
+        post_obj.slug = slug_generator(post_obj.title)
+        post_obj.save()
+        post_form = BlogPostModelForm()
     template_name = "blog_posts/create.html"
     context = {"post_form": post_form, "title": "Post Create"}
     return render(request, template_name, context)
