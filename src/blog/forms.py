@@ -1,10 +1,12 @@
 from django import forms
+from .models import BlogPost
 
 
-class BlogPostForm(forms.Form):
-    title = forms.CharField(
-        widget=forms.TextInput(attrs={"class": "validate", "id": "title"})
-    )
-    content = forms.CharField(
-        widget=forms.Textarea(attrs={"class": "materialize-textarea", "id": "content"})
-    )
+class BlogPostModelForm(forms.ModelForm):
+    class Meta:
+        model = BlogPost
+        fields = ["title", "content"]
+        widgets = {
+            "title": forms.TextInput(attrs={"class": "validate"}),
+            "content": forms.Textarea(attrs={"class": "materialize-textarea"}),
+        }
