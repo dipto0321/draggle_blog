@@ -7,7 +7,6 @@ verify_ssl = true
 autopep8 = "*"
 codecov = "*"
 coverage = "*"
-black = "*"
 
 [packages]
 django = "==2.2"
