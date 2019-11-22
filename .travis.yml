@@ -6,4 +6,5 @@ install:
   - pipenv install
 
 script:
+  - pipenv shell
   - python src/manage.py test
