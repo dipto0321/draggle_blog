@@ -7,7 +7,7 @@ verify_ssl = true
 autopep8 = "*"
 codecov = "*"
 coverage = "*"
-pytest = "*"
+pytest-django = "*"
 pytest-cov = "*"
 
 [packages]
