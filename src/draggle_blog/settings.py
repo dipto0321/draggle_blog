@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("DRAGGLE_BLOG_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("ENVIRONMENT") == "development"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://draggle-blog.herokuapp.com/"]
 
 LOGIN_URL = "/login"
 

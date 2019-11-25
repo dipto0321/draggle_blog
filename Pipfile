@@ -12,6 +12,7 @@ pytest-cov = "*"
 
 [packages]
 django = "==2.2"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
