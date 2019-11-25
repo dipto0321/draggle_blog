@@ -11,7 +11,9 @@ pytest-django = "*"
 pytest-cov = "*"
 
 [packages]
-django = "==2.2"
+django = "==2.2.4"
+gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.7"
