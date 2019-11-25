@@ -1,1 +1,1 @@
-web: gunicorn draggle_blog.wsgi --log-file -
+web: gunicorn --chdir src/ draggle_blog.wsgi --log-file -
