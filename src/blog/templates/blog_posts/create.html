@@ -15,6 +15,7 @@
               <div class="input-field col s12">
                 {{post_form.title}}
                 <label for="{{ post_form.title.id_for_label }}">Title</label>
+                <span class="helper-text red-text text-darken-2">{{post_form.title.errors}}</span>
               </div>
               <div class="input-field col s12">
                 {{post_form.content}}
