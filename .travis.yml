@@ -3,9 +3,15 @@ language: python
 python: 
   - '3.7'
 
+services:
+  - postgresql
+
 install:
   - pip install pipenv
   - pipenv install
+
+before_script:
+  - psql -c 'create database ${DRAGGLE_BLOG_DB_NAME};' -U postgres
 
 script:
   - python src/manage.py test
