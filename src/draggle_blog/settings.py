@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("DRAGGLE_BLOG_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("ENVIRONMENT") == "development"
+DEBUG = os.environ.get("DJANGO_DEGUB") == "True"
 
-ALLOWED_HOSTS = ["https://draggle-blog.herokuapp.com/", "0.0.0.0"]
+ALLOWED_HOSTS = ["draggle-blog.herokuapp.com"]
 
 LOGIN_URL = "/login"
 
@@ -77,10 +77,11 @@ WSGI_APPLICATION = "draggle_blog.wsgi.application"
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-    }
+    "default": {"ENGINE": "django.db.backends.postgresql",
+                "NAME": "draggle_blog",
+                'HOST': '127.0.0.1',
+                'PORT': '5432'
+                }
 }
 
 
