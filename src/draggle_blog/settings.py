@@ -77,7 +77,11 @@ WSGI_APPLICATION = "draggle_blog.wsgi.application"
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {"ENGINE": "django.db.backends.postgresql", "NAME": "draggle_blog"}
+    "default": {"ENGINE": "django.db.backends.postgresql",
+                "NAME": "draggle_blog",
+                'HOST': '127.0.0.1',
+                'PORT': '5432'
+                }
 }
 
 
