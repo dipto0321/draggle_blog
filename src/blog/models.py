@@ -18,8 +18,8 @@ class BlogPost(models.Model):
     def get_post_retrive_url(self):
         return f"/blog/{self.slug}"
 
-    def get_post__edit_url(self):
+    def get_post_edit_url(self):
         return f"/blog/{self.slug}/edit/"
 
-    def get_post__delete_url(self):
+    def get_post_delete_url(self):
         return f"/blog/{self.slug}/delete/"

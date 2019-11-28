@@ -56,5 +56,5 @@ def blog_post_delete_view(request, slug):
         post_obj.delete()
         return redirect('/blog/')
     template_name = "blog_posts/delete.html"
-    context = {"post_obj": post_obj}
+    context = {"post": post_obj}
     return render(request, template_name, context)

@@ -1,6 +1,14 @@
 {% extends 'base/base.html' %}
 {% block head_title %} {{post.title}} {% endblock %}
 {% block content %}
-<h1>{{post.title}}</h1>
-<p>{{post.content}}</p>
+  <h1>{{post.title}}</h1>
+  <p>{{post.content}}</p>
+  {% if request.user.is_authenticated %}
+    {% if request.user.is_staff %}
+    <div>
+      <a href="{{ post.get_post_edit_url }}" class="waves-effect waves-light btn amber darken-4"><i class="material-icons right">mode_edit</i>Update</a>
+      <a href="{{ post.get_post_delete_url }}" class="waves-effect waves-light btn red darken-4"><i class="material-icons right">delete</i>Erase</a>
+    </div>
+    {% endif %}
+  {% endif %}
 {% endblock %}

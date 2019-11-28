@@ -10,7 +10,7 @@
     </li>
     {% for post in post_list %}
     <li class="collection-item">
-      <a href="/blog/{{post.slug}}/" class="teal-text text-darken-2">{{post.title}}</a>
+      <a href="{{ post.get_post_retrive_url }}" class="teal-text text-darken-2">{{post.title}}</a>
     </li>
     {% endfor %}
   </ul>
