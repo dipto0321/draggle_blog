@@ -9,6 +9,7 @@ codecov = "*"
 coverage = "*"
 pytest-django = "*"
 pytest-cov = "*"
+codacy-coverage = "*"
 
 [packages]
 django = "==2.2.4"
