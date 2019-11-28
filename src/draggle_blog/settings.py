@@ -28,7 +28,6 @@ DEBUG = os.environ.get("DJANGO_DEGUB") == "True"
 
 ALLOWED_HOSTS = ["draggle-blog.herokuapp.com"]
 
-LOGIN_URL = "/login"
 
 # Application definition
 
