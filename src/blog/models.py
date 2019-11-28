@@ -16,7 +16,7 @@ class BlogPost(models.Model):
     content = models.TextField(null=True, blank=True)
 
     def get_post_retrive_url(self):
-        return f"/blog/{self.slug}"
+        return f"/blog/{self.slug}/"
 
     def get_post_edit_url(self):
         return f"/blog/{self.slug}/edit/"
