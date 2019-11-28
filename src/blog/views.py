@@ -8,7 +8,7 @@ from .forms import BlogPostModelForm
 def blog_post_list_view(request):
     post_list = BlogPost.objects.all()
     template_name = "blog_posts/index.html"
-    context = {"post_list": post_list, "title": "Post List"}
+    context = {"post_list": post_list, "title": "All post"}
     return render(request, template_name, context)
 
 
@@ -31,7 +31,7 @@ def blog_post_create_view(request):
 def blog_post_retrive_view(request, slug):
     post_obj = get_object_or_404(BlogPost, slug=slug)
     template_name = "blog_posts/retrive.html"
-    context = {"post": post_obj}
+    context = {"post": post_obj, "title": post_obj.title}
     return render(request, template_name, context)
 
 
@@ -44,7 +44,10 @@ def blog_post_update_view(request, slug):
         return redirect(f"/blog/{slug}")
     template_name = "blog_posts/post_form.html"
     context = {"post_form": post_form,
-               "title": f"Update {post_obj.title}", "btn_name": "Update"}
+               "title": f"Update {post_obj.title}",
+               "btn_name": "Update",
+               "post_url": post_obj.get_post_retrive_url
+               }
     return render(request, template_name, context)
 
 
@@ -55,5 +58,5 @@ def blog_post_delete_view(request, slug):
         post_obj.delete()
         return redirect('/blog/')
     template_name = "blog_posts/delete.html"
-    context = {"post": post_obj}
+    context = {"post": post_obj, "title": "Delete Confirmation"}
     return render(request, template_name, context)
