@@ -3,11 +3,11 @@ from django.db import models
 
 # Create your models here.
 
-User = settings.AUTH_USER_MODEL
+USER = settings.AUTH_USER_MODEL
 
 
 class BlogPost(models.Model):
-    user = models.ForeignKey(User,
+    user = models.ForeignKey(USER,
                              null=True,
                              default=1,
                              on_delete=models.SET_NULL)

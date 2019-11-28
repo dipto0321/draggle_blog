@@ -1,9 +1,8 @@
-# from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render, get_object_or_404, redirect
+from helpers.utils_libs import slug_generator
 from .models import BlogPost
 from .forms import BlogPostModelForm
-from helpers.utils import slug_generator
 
 
 def blog_post_list_view(request):
