@@ -1,6 +1,6 @@
 # from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import BlogPost
 from .forms import BlogPostModelForm
 from helpers.utils import slug_generator
@@ -23,8 +23,9 @@ def blog_post_create_view(request):
         post_obj.user = request.user
         post_obj.save()
         post_form = BlogPostModelForm()
-    template_name = "blog_posts/create.html"
-    context = {"post_form": post_form, "title": "Post Create"}
+    template_name = "blog_posts/post_form.html"
+    context = {"post_form": post_form,
+               "title": "Create Post", "btn_name": "Make post"}
     return render(request, template_name, context)
 
 
@@ -35,10 +36,16 @@ def blog_post_retrive_view(request, slug):
     return render(request, template_name, context)
 
 
+@staff_member_required
 def blog_post_update_view(request, slug):
     post_obj = get_object_or_404(BlogPost, slug=slug)
-    template_name = "blog_posts/update.html"
-    context = {"form": None, "post_obj": post_obj}
+    post_form = BlogPostModelForm(request.POST or None, instance=post_obj)
+    if post_form.is_valid():
+        post_form.save()
+        return redirect(f"/blog/{slug}")
+    template_name = "blog_posts/post_form.html"
+    context = {"post_form": post_form,
+               "title": f"Update {post_obj.title}", "btn_name": "Update"}
     return render(request, template_name, context)
 
 
