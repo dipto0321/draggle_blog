@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+{% block head_title %} Delete confirmation {% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col s12">
+    <h4>Are you sure want to delete the following?</h4>
+    <p>{{post_obj.title}}</p>
+  </div>
+  <div class="col">
+    <form method="POST">
+    {% csrf_token %}
+    <button class="btn waves-effect waves-light red" type="submit" name="action">Delete post
+      <i class="material-icons right">delete</i>
+    </button>
+    </form>
+  </div>
+  <a href="/blog/" class="waves-effect waves-light btn amber darken-4"><i class="material-icons right">assignment_return</i>Back</a>
+</div>
+{% endblock %}

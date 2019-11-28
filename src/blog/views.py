@@ -49,8 +49,12 @@ def blog_post_update_view(request, slug):
     return render(request, template_name, context)
 
 
+@staff_member_required
 def blog_post_delete_view(request, slug):
     post_obj = get_object_or_404(BlogPost, slug=slug)
+    if request.method == 'POST':
+        post_obj.delete()
+        return redirect('/blog/')
     template_name = "blog_posts/delete.html"
     context = {"post_obj": post_obj}
     return render(request, template_name, context)

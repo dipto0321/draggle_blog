@@ -10,8 +10,7 @@
     </li>
     {% for post in post_list %}
     <li class="collection-item">
-      <div>{{post.title}}<a href="/blog/{{post.slug}}/" class="secondary-content"><i class="material-icons">more</i></a>
-      </div>
+      <a href="/blog/{{post.slug}}/" class="teal-text text-darken-2">{{post.title}}</a>
     </li>
     {% endfor %}
   </ul>
