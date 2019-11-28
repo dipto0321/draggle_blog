@@ -4,7 +4,7 @@
       <img class="activator" src="https://materializecss.com/images/sample-1.jpg">
     </div>
     <div class="card-content">
-      <a href="{{ post.get_post_retrive_url }}" class="card-title teal-text text-darken-4">{{post.title}}</a>
+      <a href="{{ post.get_post_retrive_url }}" class="card-title teal-text text-darken-4">{{post.title|truncatewords:3}}</a>
     </div>
   </div>
 </div>
