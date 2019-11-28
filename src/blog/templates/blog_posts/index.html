@@ -1,5 +1,4 @@
 {% extends 'base/base.html' %}
-{% block head_title %} {{title}} {% endblock %}
 {% block content %}
 <section class="section">
   {% if request.user.is_authenticated %}
@@ -8,13 +7,13 @@
     Post</a>
     {% endif %}
   {% endif %}
-  <ul class="collection with-header">
-    <li class="collection-header">
+  <div class="row">
+    <div class="col s12">
       <h4>All posts</h4>
-    </li>
+    </div>
     {% for post in post_list %}
       {% include 'blog_posts/list-item.html' with post=post %}
     {% endfor %}
-  </ul>
+  </div>
 </section>
 {% endblock %}
