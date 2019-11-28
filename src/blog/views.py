@@ -20,6 +20,7 @@ def blog_post_create_view(request):
     if post_form.is_valid():
         post_obj = post_form.save(commit=False)
         post_obj.slug = slug_generator(post_obj.title)
+        post_obj.user = request.user
         post_obj.save()
         post_form = BlogPostModelForm()
     template_name = "blog_posts/create.html"
@@ -46,4 +47,3 @@ def blog_post_delete_view(request, slug):
     template_name = "blog_posts/delete.html"
     context = {"post_obj": post_obj}
     return render(request, template_name, context)
-
