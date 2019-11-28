@@ -44,7 +44,10 @@ def blog_post_update_view(request, slug):
         return redirect(f"/blog/{slug}")
     template_name = "blog_posts/post_form.html"
     context = {"post_form": post_form,
-               "title": f"Update {post_obj.title}", "btn_name": "Update"}
+               "title": f"Update {post_obj.title}",
+               "btn_name": "Update",
+               "post_url": post_obj.get_post_retrive_url
+               }
     return render(request, template_name, context)
 
 
