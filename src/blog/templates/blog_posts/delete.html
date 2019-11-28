@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block head_title %} Delete confirm: {{post.title}} {% endblock %}
+{% block content %}
+<h4>Are you sure want to delete the following?</h4>
+<p>{{post.title}}</p>
+<form method="POST">
+{% csrf_token %}
+<button class="btn waves-effect waves-light red" type="submit" name="action">Delete post
+  <i class="material-icons right">delete</i>
+</button>
+</form>
+{% endblock %}
