@@ -1,9 +1,8 @@
-# from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render, get_object_or_404, redirect
+from helpers.utils_libs import slug_generator
 from .models import BlogPost
 from .forms import BlogPostModelForm
-from helpers.utils import slug_generator
 
 
 def blog_post_list_view(request):
@@ -56,5 +55,5 @@ def blog_post_delete_view(request, slug):
         post_obj.delete()
         return redirect('/blog/')
     template_name = "blog_posts/delete.html"
-    context = {"post_obj": post_obj}
+    context = {"post": post_obj}
     return render(request, template_name, context)

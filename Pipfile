@@ -10,6 +10,7 @@ coverage = "*"
 pytest-django = "*"
 pytest-cov = "*"
 codacy-coverage = "*"
+pylint-django = "*"
 
 [packages]
 django = "==2.2.4"
