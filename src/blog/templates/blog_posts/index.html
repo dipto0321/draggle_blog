@@ -13,9 +13,7 @@
       <h4>All posts</h4>
     </li>
     {% for post in post_list %}
-    <li class="collection-item">
-      <a href="{{ post.get_post_retrive_url }}" class="teal-text text-darken-2">{{post.title}}</a>
-    </li>
+      {% include 'blog_posts/list-item.html' with post=post %}
     {% endfor %}
   </ul>
 </section>
