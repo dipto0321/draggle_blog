@@ -5,6 +5,7 @@
 [![codecov](https://codecov.io/gh/dipto0321/draggle_blog/branch/master/graph/badge.svg)](https://codecov.io/gh/dipto0321/draggle_blog)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4367d3cf13f84ae5a0dcf96f15e7800d)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dipto0321/draggle_blog&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/dipto0321/draggle_blog.svg?branch=master)](https://travis-ci.org/dipto0321/draggle_blog)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/dipto0321/draggle_blog/master)
 ![Dependabot Status](https://badgen.net/dependabot/dependabot/dependabot-core/?icon=dependabot)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 ![Django project](https://www.djangoproject.com/m/img/badges/djangoproject120x25.gif)
