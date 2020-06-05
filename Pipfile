@@ -13,7 +13,7 @@ codacy-coverage = "*"
 pylint-django = "*"
 
 [packages]
-django = "==3.0.3"
+django = "==3.0.7"
 gunicorn = "*"
 django-heroku = "*"
 psycopg2 = "*"
